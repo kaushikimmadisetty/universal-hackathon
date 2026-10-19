@@ -1,8 +1,10 @@
-# Universal Hackathon: AI-Native Shopify
+# {{PRODUCT_NAME}}
 
-> **Shopify gives you a store. We give you a team.**
+> **Bring the product. We build the business.**
 
-Tell us what you sell and upload a few product photos. A team of AI agents builds the business for you: brand, copy, product images, and a live landing page.
+Shopify was built for people who build stores. We're built for people who make things.
+
+{{PRODUCT_NAME}} is an AI-native Shopify, built for AI from day one. Tell us what you sell and upload a few product photos. A team of AI agents builds the business for you: brand, copy, product images, and a live landing page.
 
 **Demo example:** "I sell homemade cookies" + 3 photos → brand kit, copy, polished images, and a live store page.
 
@@ -119,15 +121,16 @@ The frontend polls `/status` every 2 seconds, or uses webhooks/SSE if the backen
 
 ## Demo script (about 3 minutes)
 
-1. **The problem:** a home baker wants to sell cookies but has no brand, no site, and no time.
-2. Type "homemade cookies", upload photos, and hit **Launch**.
-3. Show the agents working and handing off in real time (BAND + team screen).
-4. Open the live landing page.
-5. **Pitch:** "Shopify gives you a store. We give you a team."
+1. **Intro:** "Shopify was built for people who build stores. We're built for people who make things."
+2. **The problem:** a home baker wants to sell cookies but has no brand, no site, and no time.
+3. Type "homemade cookies", upload photos, and hit **Launch**.
+4. Show the agents working and handing off in real time (BAND + team screen).
+5. Open the live landing page.
+6. **Closing line:** "Bring the product. We build the business."
 
 ## Open questions
 
 - [ ] Is Masky required? (Ask organizers on Discord.)
 - [ ] What hosts the landing page? (Ask backend dev.)
 - [ ] Which image model does the Image agent use? (Ask backend dev.)
-- [ ] Product name: TBD.
+- [ ] Product name: TBD. Top candidate is Storecraft. Until it's decided, use `{{PRODUCT_NAME}}` everywhere (UI and README) so the final name is a one-line swap.
