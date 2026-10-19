@@ -1,0 +1,29 @@
+{
+  "name": "{{PRODUCT_NAME}}",
+  "working_name": "Storecraft",
+  "tagline": "Bring the product. We build the business.",
+  "tagline_long": "Shopify was built for people who build stores. We're built for people who make things.",
+  "colors": {
+    "cobalt": { "hex": "#2340E6", "role": "Primary accent: CTAs, logo mark background. Use white text on it (7.1:1)." },
+    "navy":   { "hex": "#1B2A6B", "role": "All body and heading text, wordmark. 13.2:1 on white." },
+    "butter": { "hex": "#FFF1C7", "role": "Soft surfaces, logo bag. Navy text on it (11.7:1)." },
+    "paper":  { "hex": "#FFFFFF", "role": "Page background." },
+    "graphite": { "hex": "#4A4A4A", "role": "Secondary text and captions." },
+    "rule":   { "hex": "#E6E6E6", "role": "Dividers and borders." }
+  },
+  "fonts": {
+    "display": { "family": "Bricolage Grotesque", "weight": 800, "letter_spacing": "-0.03em", "source": "Google Fonts" },
+    "body":    { "family": "Inter", "weights": [400, 500], "source": "Google Fonts" },
+    "label":   { "family": "JetBrains Mono", "weight": 400, "transform": "uppercase", "letter_spacing": "0.12em", "source": "Google Fonts" }
+  },
+  "voice": {
+    "summary": "Plainspoken. Confident. On the maker's side.",
+    "do": ["Your shop is live.", "Bring the product. We build the business."],
+    "dont": ["Leverage AI to optimize your storefront."]
+  },
+  "assets": {
+    "mark": "brand/mark.svg",
+    "mark_navy": "brand/mark-navy.svg",
+    "lockup": "brand/lockup.png"
+  }
+}

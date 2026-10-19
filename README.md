@@ -8,6 +8,26 @@ Shopify was built for people who build stores. We're built for people who make t
 
 **Demo example:** "I sell homemade cookies" + 3 photos → brand kit, copy, polished images, and a live store page.
 
+## Brand
+
+![{{PRODUCT_NAME}} logo](brand/lockup.png)
+
+**Cobalt & Butter.** The product stays a calm frame so each merchant's generated brand is the star.
+
+| Color | Hex | Use |
+|---|---|---|
+| Cobalt | `#2340E6` | Primary accent, CTAs, logo mark (white text, 7.1:1) |
+| Navy | `#1B2A6B` | All text, wordmark (13.2:1 on white) |
+| Butter | `#FFF1C7` | Soft surfaces, logo bag |
+| Paper | `#FFFFFF` | Background |
+| Graphite | `#4A4A4A` | Secondary text |
+| Rule | `#E6E6E6` | Dividers |
+
+**Type:** Bricolage Grotesque 800 (display), Inter 400/500 (body), JetBrains Mono (labels).
+**Voice:** Plainspoken. Confident. On the maker's side.
+
+Assets live in [`brand/`](brand): `mark.svg`, `mark-navy.svg`, PNG versions, the lockup, and [`brand.json`](brand/brand.json) for the frontend to read colors and fonts from. The wordmark uses the working name "Storecraft" until the product name is final.
+
 ## Event
 
 - **Event:** Universal Hackathon, AWS Builder Loft SF, Monday Oct 19, 2026
