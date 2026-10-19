@@ -104,7 +104,7 @@ User input
 
 ## Team split
 
-- **Backend (other developer):** n8n workflows, BAND setup, agent logic, model calls.
+- **Backend:** Python/FastAPI launch and status API, MongoDB Atlas job state, n8n workflows, BAND setup, agent logic, and model calls.
 - **Frontend (Claude Code):** the web UI described below.
 
 ## Frontend scope
@@ -115,21 +115,25 @@ User input
 
 Until the backend is ready, the frontend runs on mock data so the UI is demo-ready either way.
 
-## API contract (proposed, confirm with the backend dev)
+## API contract
 
 ```
 POST /launch
-  body:     { description, images[] }
-  response: { job_id }
+  body:     multipart/form-data with description and 1 to 5 repeated images[] fields
+  response: { job_id, status, status_url, events_url }
 
-GET /status/:job_id
+GET /status/{job_id}
   response: {
-    agents:  [{ name, status, message }],
-    results: { brand, copy, images, landing_url, app }
+    job_id, status, current_stage,
+    agents:  [{ id, name, status, message, updated_at }],
+    results: { brand, copy, images, landing_url, app, summary },
+    error, updated_at
   }
+GET /events/{job_id}
+  response: ordered event history; pass after_seq to continue polling
 ```
 
-The frontend polls `/status` every 2 seconds, or uses webhooks/SSE if the backend offers them.
+The frontend polls `/status` every 2 seconds and can poll `/events/{job_id}` for the handoff timeline. Internal n8n event callbacks are signed. See [`backend/README.md`](backend/README.md) for the request, result, and callback schemas.
 
 ## Build rules
 
@@ -137,7 +141,7 @@ The frontend polls `/status` every 2 seconds, or uses webhooks/SSE if the backen
 - Every step must do real work. A real live URL at the end is the money shot.
 - No secrets in the repo. API keys go in `.env`, and `.env` goes in `.gitignore`.
 - Run Snyk before the demo and fix anything high or critical.
-- Keep it simple: no auth, no payments, and no database unless the backend needs one.
+- Keep it simple: no auth or payments; use Atlas for launch state, results, and the event timeline.
 
 ## Demo script (about 3 minutes)
 
